@@ -5,13 +5,26 @@ Changelog
 Incoming
 ==================
 
-* Deprecation warning ! Two settings are renammed: (old name still work)
+* Deprecation warning ! Two settings are renamed: (old name still work)
   ``DJANGOCMS_PICTURE_RESPONSIVE_IMAGES`` become ``DJANGOCMS_PICTURE_RESPONSIVE_IMAGES_ENABLED`` 
   ``DJANGOCMS_PICTURE_RESPONSIVE_IMAGES_VIEWPORT_BREAKPOINTS`` become ``DJANGOCMS_PICTURE_RESPONSIVE_IMAGES_SIZES``
 * Rewrote of responsive images mode which now make use of ``<picture>`` HTML tag
   to support different pictures for small, medium and large screens and to 
   allow to generate WebP alternative version.
 
+4.1.1 (2023-10-19)
+==================
+
+* Updated release workflows
+
+4.1.0
+=====
+
+* Added support for Django 3.2, 4.0, 4.1, and 4.2
+* Added support for Django CMS 3.11
+* Added support for Python 3.11
+* Dropped support for Django <= 3.1
+* Dropped support for Python 3.7
 
 4.0.0 (2022-03-25)
 ==================
