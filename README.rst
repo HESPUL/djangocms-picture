@@ -18,8 +18,8 @@ Run this SQL to drop columns and remove migrations.
     ALTER TABLE djangocms_picture_picture DROP COLUMN medium_screen_viewport_width;
     ALTER TABLE djangocms_picture_picture DROP COLUMN small_screen_viewport_width;
     
-    DELETE FROM django_migrations WHERE app="djangocms_picture" AND name="0013_merge_20240502_1754";
-    DELETE FROM django_migrations WHERE app="djangocms_picture" AND name="0012_auto_20220504_2117";
+    DELETE FROM django_migrations WHERE app='djangocms_picture' AND name='0013_merge_20240502_1754';
+    DELETE FROM django_migrations WHERE app='djangocms_picture' AND name='0012_auto_20220504_2117';
 
 
 
