@@ -1,3 +1,29 @@
+============================================
+Manual rollback of responsive modifications.
+============================================
+
+Not so much used, so remove modifications and restore back ``djangocms-picture`` as dependency.
+
+Run this SQL to drop columns and remove migrations.
+
+
+
+    DROP INDEX IF EXISTS djangocms_picture_picture_large_screen_picture_id_ec59f427;
+    DROP INDEX IF EXISTS djangocms_picture_picture_medium_screen_picture_id_32e1e218;
+    
+    ALTER TABLE djangocms_picture_picture DROP COLUMN alternative_format_webp;
+    ALTER TABLE djangocms_picture_picture DROP COLUMN large_screen_picture_id;
+    ALTER TABLE djangocms_picture_picture DROP COLUMN large_screen_viewport_width;
+    ALTER TABLE djangocms_picture_picture DROP COLUMN medium_screen_picture_id;
+    ALTER TABLE djangocms_picture_picture DROP COLUMN medium_screen_viewport_width;
+    ALTER TABLE djangocms_picture_picture DROP COLUMN small_screen_viewport_width;
+    
+    DELETE FROM django_migrations WHERE app="djangocms_picture" AND name="0013_merge_20240502_1754";
+    DELETE FROM django_migrations WHERE app="djangocms_picture" AND name="0012_auto_20220504_2117";
+
+
+
+
 =============================
 django CMS Picture Responsive
 =============================
